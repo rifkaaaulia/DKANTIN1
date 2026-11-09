@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Checkout | Kantin Polije</title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+    </head>
+    <body>
+        <header class="topbar">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">◉</span>
+                Kantin Polije
+            </a>
+            <input class="search" placeholder="Cari makanan atau minuman..." onkeydown="if(event.key==='Enter')location.href='menu.html'">
+            <div class="top-actions">
+                <a href="keranjang.html" title="Keranjang">
+                    🛒
+                    <span id="cart-count"></span>
+                </a>
+            </div>
+        </header>
+
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="side-brand">Kantin Polije</div>
+                <nav class="nav">
+                    <a class="" href="index.html">› Beranda</a>
+                    <a class="" href="menu.html">› Menu</a>
+                    <a class="active" href="keranjang.html">› Keranjang</a>
+                    <a class="" href="riwayat.html">› Riwayat</a>
+                    <a class="" href="pengaturan.html">› Pengaturan</a>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <div class="section-head">
+                    <h2>Checkout</h2>
+                </div>
+
+                <div class="checkout-grid">
+                    <form class="panel" onsubmit="placeOrder(event)">
+                        <h3>Alamat Pemesanan</h3>
+                        <label class="field">
+                            <label>Nama pemesan</label>
+                            <input required placeholder="Masukkan nama">
+                        </label>
+                        <label class="field">
+                            <label>Nomor HP</label>
+                            <input required type="tel" placeholder="08xxxxxxxxxx">
+                        </label>
+                        <label class="field">
+                            <label>Metode pengambilan</label>
+                            <select>
+                                <option>Ambil di kantin</option>
+                                <option>Kirim ke alamat</option>
+                            </select>
+                        </label>
+                        <label class="field">
+                            <label>Catatan</label>
+                            <input placeholder="Contoh: tidak pedas (opsional)">
+                        </label>
+
+                        <h3>Metode Pembayaran</h3>
+                        <label class="field">
+                            <input type="radio" name="bayar" checked> QRIS (GoPay, OVO, DANA)
+                        </label>
+                        <label class="field">
+                            <input type="radio" name="bayar"> Transfer Bank
+                        </label>
+                        <button type="submit">Bayar Sekarang</button>
+                    </form>
+
+                    <aside class="panel">
+                        <h3>Ringkasan</h3>
+                        <div id="checkout-summary" class="summary"></div>
+                    </aside>
+                </div>
+            </main>
+        </div>
+        <footer class="footer">
+            © 2026 Kantin Polije · Sistem Pemesanan Kantin Politeknik Negeri Jember
+        </footer>
+    </body>
+</html>

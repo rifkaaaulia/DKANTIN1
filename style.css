@@ -1,0 +1,580 @@
+/* Variabel warna */
+:root {
+  --green: #173f39;
+  --green2: #20564d;
+  --mint: #e6f3ef;
+  --line: #dce7e3;
+  --text: #20332f;
+  --muted: #71817c;
+  --white: #fff;
+  --bg: #f6f9f8;
+  --orange: #f3a43b;
+}
+
+/* Reset & dasar */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* Tombol */
+button,
+.btn {
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 16px;
+  background: var(--green);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--green2);
+}
+
+.btn-light {
+  background: var(--mint);
+  color: var(--green);
+}
+
+.btn-outline {
+  background: #fff;
+  color: var(--green);
+  border: 1px solid var(--line);
+}
+
+/* Utilitas */
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 12px;
+}
+
+.container {
+  max-width: 1180px;
+  margin: auto;
+  padding: 22px;
+}
+
+/* Topbar */
+.topbar {
+  height: 64px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 max(22px, calc((100% - 1180px) / 2));
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 800;
+  color: var(--green);
+}
+
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.search {
+  width: min(360px, 40vw);
+  background: #f4f8f6;
+  border: 1px solid #e5eeea;
+  border-radius: 8px;
+  padding: 10px 13px;
+  outline: none;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Layout & sidebar */
+.layout {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 22px;
+  max-width: 1180px;
+  margin: 22px auto;
+  padding: 0 22px;
+  min-height: calc(100vh - 160px);
+}
+
+.sidebar {
+  background: var(--green);
+  border-radius: 12px;
+  padding: 18px 12px;
+  color: #dce9e5;
+  height: max-content;
+  position: sticky;
+  top: 84px;
+}
+
+.side-brand {
+  font-weight: 700;
+  color: #fff;
+  padding: 0 10px 18px;
+}
+
+.nav a {
+  display: block;
+  padding: 11px 10px;
+  border-radius: 7px;
+  font-size: 13px;
+  margin: 3px 0;
+}
+
+.nav a:hover,
+.nav a.active {
+  background: #2a6258;
+  color: #fff;
+}
+
+.content {
+  min-width: 0;
+}
+
+/* Welcome banner & section head */
+.welcome {
+  background: var(--green);
+  color: #fff;
+  border-radius: 12px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.welcome h2 {
+  margin: 0 0 7px;
+  font-size: 20px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0 13px;
+}
+
+.section-head h2 {
+  font-size: 17px;
+  margin: 0;
+}
+
+/* Grid, kartu makanan, panel, statistik */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.food-card,
+.panel,
+.stat {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.food-card img {
+  width: 100%;
+  height: 135px;
+  object-fit: cover;
+  display: block;
+  background: var(--mint);
+}
+
+.food-info {
+  padding: 12px;
+}
+
+.food-info h3 {
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+.food-info .btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 9px;
+}
+
+.price {
+  color: #16866d;
+  font-weight: 700;
+}
+
+.panel {
+  padding: 18px;
+}
+
+/* Tab */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0 18px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 8px 13px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--green);
+  color: #fff;
+}
+
+/* Detail menu */
+.detail {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) 1.1fr;
+  gap: 24px;
+}
+
+.detail img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Form */
+.field {
+  display: block;
+  margin: 12px 0;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.row > * {
+  flex: 1;
+}
+
+/* Tabel */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 13px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.table th {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Keranjang & checkout */
+.cart-item {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.cart-item img {
+  width: 76px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.summary {
+  background: #f7faf9;
+  border: 1px solid var(--line);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.summary-line.total {
+  font-weight: 800;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 18px;
+}
+
+/* Login */
+.login-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.login-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  max-width: 760px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 28px;
+}
+
+.login-brand {
+  background: var(--green);
+  border-radius: 12px;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.login-brand .brand-mark {
+  width: 64px;
+  height: 64px;
+  font-size: 24px;
+  background: #fff;
+  color: var(--green);
+}
+
+.login-form {
+  padding: 8px;
+}
+
+.login-form h2 {
+  margin: 5px 0;
+}
+
+/* Timeline status pesanan */
+.timeline {
+  border-left: 3px solid var(--mint);
+  padding-left: 20px;
+  margin: 22px 0;
+}
+
+.step {
+  position: relative;
+  margin: 20px 0;
+}
+
+.step:before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 1px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #16866d;
+  border: 3px solid #dff1eb;
+}
+
+/* Statistik & grafik (dashboard penjual/admin) */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.stat {
+  padding: 17px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 23px;
+  margin-top: 8px;
+}
+
+.chart {
+  height: 190px;
+  display: flex;
+  align-items: end;
+  gap: 14px;
+  padding: 20px 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.bar {
+  flex: 1;
+  background: #b8ddd1;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+}
+
+.bar span {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* ==========================================================================
+   Footer & state kosong
+   ========================================================================== */
+.footer {
+  background: #fff;
+  border-top: 1px solid var(--line);
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.empty {
+  text-align: center;
+  padding: 35px;
+  color: var(--muted);
+}
+
+/* Responsif */
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .side-brand {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .checkout-grid,
+  .detail {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    padding: 0 14px;
+  }
+
+  .search {
+    width: 35vw;
+  }
+}
+
+@media (max-width: 520px) {
+  .grid,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .login-card {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand {
+    min-height: 150px;
+  }
+
+  .topbar {
+    gap: 8px;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .layout {
+    padding: 0 14px;
+  }
+
+  .welcome {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

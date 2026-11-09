@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dashboard Admin | Kantin Polije</title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+    </head>
+    <body>
+        <header class="topbar">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">◉</span>
+                Kantin Polije
+            </a>
+            <input class="search" placeholder="Cari makanan atau minuman..." onkeydown="if(event.key==='Enter')location.href='menu.html'">
+            <div class="top-actions">
+                <a href="keranjang.html" title="Keranjang">
+                    🛒
+                    <span id="cart-count"></span>
+                </a>
+            </div>
+        </header>
+
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="side-brand">Kantin Polije</div>
+                <nav class="nav">
+                    <a class="active" href="index.html">› Beranda</a>
+                    <a class="" href="menu.html">› Menu</a>
+                    <a class="" href="keranjang.html">› Keranjang</a>
+                    <a class="" href="riwayat.html">› Riwayat</a>
+                    <a class="" href="pengaturan.html">› Pengaturan</a>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <div class="section-head">
+                    <h2>Dashboard Admin</h2>
+                    <span class="muted">Ringkasan aktivitas kantin</span>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        Total Pesanan
+                        <strong>48</strong>
+                        <span class="small muted">Pesanan tercatat</span>
+                    </div>
+                    <div class="stat">
+                        Pendapatan
+                        <strong>Rp 672.000</strong>
+                        <span class="small muted">Hari ini</span>
+                    </div>
+                    <div class="stat">
+                        Menu Terjual
+                        <strong>12</strong>
+                        <span class="small muted">Jenis menu</span>
+                    </div>
+                </div>
+
+                <div class="section-head">
+                    <h2>Pesanan Hari Ini</h2>
+                </div>
+
+                <div class="panel">
+                    <div class="chart">
+                        <div class="bar" style("height:40%")><span>Sen</span></div>
+                        <div class="bar" style("height:55%")><span>Sel</span></div>
+                        <div class="bar" style("height:48%")><span>Rab</span></div>
+                        <div class="bar" style("height:78%")><span>Kam</span></div>
+                        <div class="bar" style("height:65%")><span>Jum</span></div>
+                        <div class="bar" style("height:92%")><span>Sab</span></div>
+                        <div class="bar" style("height:70%")><span>Min</span></div>
+                    </div>
+                </div>
+
+                <div class="section-head">
+                    <h2>Pesanan Terbaru</h2>
+                </div>
+
+                <div class="panel">
+                    <table class="table">
+                        <tr>
+                            <th>Nomor Pesanan</th>
+                            <th>Menu</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            #KP2812345
+                            Nasi Ayam Geprek
+                            Diproses
+                        </tr>
+                        #KP2812344
+                        Mi Ayam
+                        Selesai
+                    </table>
+                </div>
+            </main>
+        </div>
+        <footer class="footer">
+            © 2026 Kantin Polije · Sistem Pemesanan Kantin Politeknik Negeri Jember
+        </footer>
+    </body>
+</html>

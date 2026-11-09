@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pengaturan | Kantin Polije</title>
+   <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">
+        <span class="brand-mark">◉</span>
+        Kantin Polije
+    </a>
+    <input class="search" placeholder="Cari makanan atau minuman..." onkeydown="if(event.key==='Enter')location.href='menu.html'">
+    <div class="top-actions">
+        <a href="keranjang.html" title="Keranjang">
+            🛒
+            <span id="cart-count"></span>
+        </a>
+    </div>
+</header>
+
+<div class="layout">
+    <aside class="sidebar">
+        <div class="side-brand">Kantin Polije</div>
+        <nav class="nav">
+            <a class="" href="index.html">› Beranda</a>
+            <a class="" href="menu.html">› Menu</a>
+            <a class="" href="keranjang.html">› Keranjang</a>
+            <a class="" href="riwayat.html">› Riwayat</a>
+            <a class="active" href="pengaturan.html">› Pengaturan</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <div class="section-head">
+            <h2>Pengaturan Akun</h2>
+        </div>
+        <div class="panel" style="max-width:650px">
+            <h3>Informasi Pengguna</h3>
+            <div class="field">
+                <label>Nama</label>
+                <input value="Pengguna Kantin">
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input type="email" placeholder="nama@email.com">
+            </div>
+            <div class="field">
+                <label>Nomor HP</label>
+                <input placeholder="08xxxxxxxxxx">
+            </div>
+            <button onclick="alert('Contoh tampilan front-end: perubahan belum disimpan ke server.')">Simpan Perubahan</button>
+        </div>
+    </main>
+</div>
+
+<footer class="footer">
+    © 2026 Kantin Polije · Sistem Pemesanan Kantin Politeknik Negeri Jember
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beranda | Kantin Polije</title>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <i class="fa-solid fa-circle-dot brand-mark"></i>
+            Kantin Polije
+        </a>
+        <input class="search" placeholder="Cari makanan atau minuman..." onkeydown="if(event.key==='Enter')location.href='menu.html'">
+        <div class="top-actions">
+            <a href="keranjang.html" title="Keranjang">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count"></span>
+            </a>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="side-brand">Kantin Polije</div>
+
+            <nav class="nav">
+                <a class="active" href="index.html">
+                    <i class="fa-solid fa-house"></i> Beranda
+                </a>
+                <a href="menu.html">
+                    <i class="fa-solid fa-utensils"></i> Menu
+                </a>
+                <a href="keranjang.html">
+                    <i class="fa-solid fa-cart-shopping"></i> Keranjang
+                </a>
+                <a href="riwayat.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i> Riwayat
+                </a>
+                <a href="pengaturan.html">
+                    <i class="fa-solid fa-gear"></i> Pengaturan
+                </a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section class="welcome">
+                <div>
+                    <h2>Selamat datang di Kantin Polije!</h2>
+                    <p>Pesan makanan favoritmu dengan mudah dan praktis.</p>
+                </div>
+                <a class="btn btn-light" href="menu.html">
+                    Lihat Menu <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </section>
+
+            <div class="section-head">
+                <h2>Menu Populer</h2>
+                <a class="muted" href="menu.html">Lihat semua</a>
+            </div>
+
+            <div class="grid" id="food-list"></div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        &copy; 2026 Kantin Polije · Sistem Pemesanan Kantin Politeknik Negeri Jember
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Riwayat Pesanan | Kantin Polije</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">
+        <span class="brand-mark">◉</span>
+        Kantin Polije
+    </a>
+    <input class="search" placeholder="Cari makanan atau minuman..." onkeydown="if(event.key==='Enter')location.href='menu.html'">
+    <div class="top-actions">
+        <a href="keranjang.html" title="Keranjang">
+            🛒
+            <span id="cart-count"></span>
+        </a>
+    </div>
+</header>
+
+<div class="layout">
+    <aside class="sidebar">
+        <div class="side-brand">Kantin Polije</div>
+        <nav class="nav">
+            <a class="" href="index.html">› Beranda</a>
+            <a class="" href="menu.html">› Menu</a>
+            <a class="" href="keranjang.html">› Keranjang</a>
+            <a class="active" href="riwayat.html">› Riwayat</a>
+            <a class="" href="pengaturan.html">› Pengaturan</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <div class="section-head">
+            <h2>Riwayat Pesanan</h2>
+        </div>
+        <div class="panel">
+            <div class="tabs">
+                <span class="tab active">Semua</span>
+                <span class="tab">Berhasil</span>
+                <span class="tab">Dibatalkan</span>
+            </div>
+            <div id="history"></div>
+        </div>
+    </main>
+</div>
+
+<footer class="footer">
+    © 2026 Kantin Polije · Sistem Pemesanan Kantin Politeknik Negeri Jember
+</footer>
+
+</body></html>

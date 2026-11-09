@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Status Pesanan | Kantin Polije</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">
+        <span class="brand-mark">◉</span>
+        Kantin Polije
+    </a>
+    <input class="search" placeholder="Cari makanan atau minuman..." onkeydown="if(event.key==='Enter')location.href='menu.html'">
+    <div class="top-actions">
+        <a href="keranjang.html" title="Keranjang">
+            🛒
+            <span id="cart-count"></span>
+        </a>
+    </div>
+</header>
+
+<div class="layout">
+    <aside class="sidebar">
+        <div class="side-brand">Kantin Polije</div>
+        <nav class="nav">
+            <a class="" href="index.html">› Beranda</a>
+            <a class="" href="menu.html">› Menu</a>
+            <a class="active" href="keranjang.html">› Keranjang</a>
+            <a class="" href="riwayat.html">› Riwayat</a>
+            <a class="" href="pengaturan.html">› Pengaturan</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <div class="section-head">
+            <h2>Lacak Pesanan</h2>
+            <a href="index.html" class="muted">Beranda →</a>
+        </div>
+        <div class="panel">
+            <h3>Nomor Pesanan: <span id="order-no">#KP2812345</span></h3>
+            <p class="muted" id="order-date"></p>
+            <div class="timeline">
+                <div class="step">
+                    <b>Pesanan diterima</b>
+                    <p class="muted small">Pesanan sudah masuk ke sistem.</p>
+                </div>
+                <div class="step">
+                    <b>Sedang diproses</b>
+                    <p class="muted small">Penjual sedang menyiapkan pesanan.</p>
+                </div>
+                <div class="step">
+                    <b>Siap diambil</b>
+                    <p class="muted small">Pesanan siap diambil di kantin.</p>
+                </div>
+                <div class="step">
+                    <b>Selesai</b>
+                </div>
+            </div>
+            <a class="btn" href="riwayat.html">Lihat Riwayat Pesanan</a>
+        </div>
+    </main>
+</div>
+
+<footer class="footer">
+    © 2026 Kantin Polije · Sistem Pemesanan Kantin Politeknik Negeri Jember
+</footer>
+
+</body>
+</html>
